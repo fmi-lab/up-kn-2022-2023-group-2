@@ -53,4 +53,4 @@ You are given a single character representing a chess piece ('r' - rook, 'b' - b
 | Input | Output |
 | :-----: | :------: |
 | r 1 2 1 5 | Yes |
-| b 2 3 1 4 | No |
+| b 2 3 1 4 | Yes |
