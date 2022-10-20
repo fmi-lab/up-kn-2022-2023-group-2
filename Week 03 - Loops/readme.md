@@ -97,7 +97,7 @@ n = 8:    *
           |             
 ```
 
-## Task 09 - Supermajority
+## Task 09** - Supermajority
 
 You are given a positive number `n` and `n` consecutive integers, one of which appears more than the rest of the numbers `combined`. Find that number (You aren't allowed to use arrays).
 
