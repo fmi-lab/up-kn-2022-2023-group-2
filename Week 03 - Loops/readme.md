@@ -73,7 +73,7 @@ You are given 3 positive numbers `a`, `b` and `c`. Find the last combination of 
 
 ### Explanation:
 
-First example: All combinations between 1 and 10 are: 1 1, 1 2, 1 3, ... , 4 0, <strong>4 1</strong>, 4 2, ... ,10 9, 10 10. The combination 4 1 is the last in which the sum is 5.
+First example: All combinations between 1 and 10 are: 1 1, 1 2, 1 3, ... , 3 10, <strong>4 1</strong>, 4 2, ... ,10 9, 10 10. The combination 4 1 is the last in which the sum is 5.
 
 Second example: All combinations between 23 and 24 are: 23 23, 23 24, 24 23, 24 24. Neither of them has sum 100.
 
