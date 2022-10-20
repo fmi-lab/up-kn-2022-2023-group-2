@@ -162,3 +162,13 @@ You are given a positive number. Output it as product of prime factors.
 | :-----: | :------: |
 | 24 | 2 * 2 * 2 * 3 |
 | 98 | 2 * 7 * 7 |
+
+## Task 15 - Combinations
+
+You are given a number n. Find all the combinations of the numbers
+1, 2, 5, 10, 20, 50 and 100 to add up to the number n.
+
+### Example
+| Input | Output |
+| :-----: | :------: |
+| 7 | 7*1, 1*2 + 5*1, 2*2 + 3*1, 3*2 + 1*1, 1*5 + 2*1, 1*5 + 1*2 |
