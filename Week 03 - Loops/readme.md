@@ -165,8 +165,8 @@ You are given a positive number. Output it as product of prime factors.
 
 ## Task 15 - Combinations
 
-You are given a number n. Find all the combinations of the numbers
-1, 2, 5, 10, 20, 50 and 100 to add up to the number n.
+You are given a positive number n. Find all the combinations of the numbers
+1, 2 and 5 to add up to the number n.
 
 ### Example
 | Input | Output |
