@@ -42,23 +42,23 @@ Write a function that finds element in array and returns the index of the first 
 ### Example:
 ```c++
 int arr[]{8, 0, 2, 6, 9, 2, 7};
-std::cout<<find(arr, 7, 2); // -> 2
+std::cout<<find(arr, 7, 2); // -> 5
 std::cout<<find(arr, 7, 16); // -> -1
 ```
 
 ## Task 04 - Filter
 
 ```c++
-void filter(int destination[], const int source[], size_t size);
+unsigned filter(int destination[], const int source[], size_t size);
 ```
-Write a function, that finds those elements in `source` that are even and are divisible by 7, and stores them in `destination` array.
+Write a function, that finds those elements in `source` that are even and are divisible by 7, and stores them in `destination` array and returns the new size of `destination`.
 
 ### Example:
 ```c++
 int source[]{5,7,28,6,98,24,14,68};
 int destination[255];
-filter(destination, source, 8);
-print(destination, 8); // -> 28 98 14
+int size = filter(destination, source, 8);
+print(destination, size); // -> 28 98 14
 ```
 
 ## Task 05 - Set
