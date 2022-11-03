@@ -42,7 +42,7 @@ Write a function that finds element in array and returns the index of the first 
 ### Example:
 ```c++
 int arr[]{8, 0, 2, 6, 9, 2, 7};
-std::cout<<find(arr, 7, 2); // -> 5
+std::cout<<find(arr, 7, 2); // -> 2
 std::cout<<find(arr, 7, 16); // -> -1
 ```
 
