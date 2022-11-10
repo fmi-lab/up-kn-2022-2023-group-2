@@ -42,7 +42,7 @@ Write a function that finds element in array and returns the index of the first 
 ### Example:
 ```c++
 int arr[]{8, 0, 2, 6, 9, 2, 7};
-std::cout<<find(arr, 7, 2); // -> 5
+std::cout<<find(arr, 7, 2); // -> 2
 std::cout<<find(arr, 7, 16); // -> -1
 ```
 
@@ -118,73 +118,4 @@ Write a function that sorts array in ascending order. Make 2 different versions 
 int arr[]{10, 5, 8, 3, 13, 7};
 sort(arr, 6);
 print(arr, 6); // -> 3 5 7 8 10 13
-```
-
----
-
-## Task 09 - To upper case
-
-```c++
-void toUpperCase(char str[]);
-```
-Write a function that transform a string into upper case.
-
-### Example:
-```c++
-char str[] = "Hello Jimmy!";
-toUpperCase(str);
-std::cout<<str; // -> HELLO JIMMY!
-```
-
-## Task 10 - ASCII to integer
-
-```c++
-int atoi(const char str[]);
-```
-Write a function that as a parameter accepts string, that starts with an integer, and returns only the integer.
-
-### Example:
-```c++
-std::cout << atoi("123filler") + atoi("-81morefiller") << '\n'; // -> 42
-```
-
-## Task 11 - Longest Word
-
-```c++
-void longestWord(const char str[]);
-```
-Write a function that accepts string, representing a sentence, and prints the longest word in it.
-
-### Example:
-```c++
-longestWord("Hello, my name is Ivancho"); // -> Ivancho
-```
-
-## Task 12 - Run Length Decode
-
-```c++
-void decode(char destination[], const char source[]);
-```
-Write a function that "decodes" a `source` string and saves the result in `destination` string. To "decode" a string means to replace every occurence of {number}{character} with {number times character}.
-
-### Example:
-```c++
-char buffer[255]{};
-std::cout<<decode(buffer, "a2b10c"); // -> abbcccccccccc
-```
-
-### Bonus:
-Write a function that encodes a string using the before mentioned algorythm.
-
-## Task 13 - Reverse sentence
-
-```c++
-void reverseSentence(char destination[], const char source[]);
-```
-Write a function that reverses the order of the words in a sentence and saves the new sentence in a `source` string.
-
-### Example:
-```c++
-char buffer[255]{};
-std::cout<<reverseSentence(buffer, "May the force be with you"); // -> you with be force the May
 ```
