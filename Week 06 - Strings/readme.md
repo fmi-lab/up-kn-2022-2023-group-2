@@ -77,8 +77,9 @@ Write a function that "decodes" a `source` string and saves the result in `desti
 ### Example:
 
 ```c++
-char buffer[255]{};
-std::cout<<decode(buffer, "a2b10c"); // -> abbcccccccccc
+char buffer[255];
+decode(buffer, "a2b10c");
+std::cout<<buffer; // -> abbcccccccccc
 ```
 
 ### Bonus:
@@ -125,8 +126,9 @@ Write a function that reverses the order of the words in a sentence and saves th
 ### Example:
 
 ```c++
-char buffer[255]{};
-std::cout<<reverseSentence(buffer, "May the force be with you"); // -> you with be force the May
+char buffer[255];
+reverseSentence(buffer, "May the force be with you");
+std::cout<<buffer; // -> you with be force the May
 ```
 
 ## Task 09 - Replace word
@@ -138,6 +140,6 @@ Write a function that replaces every instance of `word1` in a sentence with `wor
 ### Example:
 ```c++
 char str[] = "I am the best programmer ever";
-removeWord(str, "programmer", "boxer");
+replace(str, "programmer", "boxer");
 std::cout<<str; // -> I am the best boxer ever
 ```
