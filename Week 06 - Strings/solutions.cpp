@@ -42,8 +42,8 @@ void toUpperCase(char str[])
 int atoi(const char str[])
 {
     int result = 0;
-    size_t i = str[0] == '-' ? 1 : 0;
     bool isNegative = str[0] == '-';
+    size_t i = isNegative ? 1 : 0;
 
     while (str[i] && str[i] >= '0' && str[i] <= '9')
     {
@@ -60,7 +60,7 @@ int atoi(const char str[])
 
 void longestWord(const char str[])
 {
-    unsigned max = 0, i = 0, current = 0, startMax = 0, endMax = 0, currentStart = 0;
+    unsigned max = 0, i = 0, current = 0, startMax = 0;
     while (str[i])
     {
         if (str[i] == ' ')
@@ -68,10 +68,8 @@ void longestWord(const char str[])
             if (current > max)
             {
                 max = current;
-                endMax = i;
-                startMax = currentStart;
+                startMax = i - max;
             }
-            currentStart = i + 1;
             current = 0;
         }
         else
@@ -84,11 +82,11 @@ void longestWord(const char str[])
     // in case the last word in the sentence is the longest
     if (current > max)
     {
-        endMax = i;
-        startMax = currentStart;
+        startMax = i - max - 1;
     }
 
-    while (startMax != endMax + 1)
+    unsigned endMax = startMax + max + 1;
+    while (startMax != endMax)
     {
         std::cout << str[startMax];
         startMax++;
@@ -251,8 +249,6 @@ void replace(char str[], const char word1[], const char word2[])
 
 int main()
 {
-    char str[] = "I am the best programmer ever";
-    replace(str, "programmer", "boxer");
-    std::cout << str;
+    longestWord("Hello, my name is Ivancho");
     return 0;
 }
