@@ -31,12 +31,12 @@ unsigned countDigits(unsigned n)
 
 unsigned gcdRec(unsigned a, unsigned b)
 {
-    if (a == b)
+    if (a == 0)
     {
-        return a;
+        return b;
     }
 
-    return a < b ? gcdRec(a, b - a) : gcdRec(a - b, b);
+    return gcdRec(b % a, a);
 }
 
 double quickPow(double x, int n)
@@ -118,7 +118,7 @@ const int *lower_bound(const int *begin, const int *end, int element)
     return *mid > element ? lower_bound(begin, mid, element) : lower_bound(mid + 1, end, element);
 }
 
-void printReverse(const char* str)
+void printReverse(const char *str)
 {
     if (!*str)
     {
@@ -173,15 +173,10 @@ int *extractNumber(const char *str, int *destination, int result)
         return extractNumber(str + 1, destination, 0);
     }
 
-    if (isDigit(*str) && !isDigit(str[1]))
+    if (isDigit(*str) && toNumber(*str) % 2 == 0 && !isDigit(str[1]))
     {
-        if ((result * 10 + toNumber(*str)) % 2 == 0)
-        {
-            *destination = result * 10 + toNumber(*str);
-            return extractNumber(str + 1, destination + 1, 0);
-        }
-
-        return extractNumber(str + 1, destination, 0);
+        *destination = result * 10 + toNumber(*str);
+        return extractNumber(str + 1, destination + 1, 0);
     }
 
     return extractNumber(str + 1, destination, result * 10 + toNumber(*str));
@@ -192,17 +187,19 @@ int *extractEvens(const char *source, int *destination)
     return extractNumber(source, destination, 0);
 }
 
-void towersOfHanoi(unsigned n, char rod1, char rod2, char rod3) {
-    if (n == 0) {
+void towersOfHanoi(unsigned n, char rod1, char rod2, char rod3)
+{
+    if (n == 0)
+    {
         return;
     }
 
     towersOfHanoi(n - 1, rod1, rod3, rod2);
-    std::cout<<"Move disc "<< n<< " from rod " << rod1 << " to rod " << rod3 << '\n';
+    std::cout << "Move disc " << n << " from rod " << rod1 << " to rod " << rod3 << '\n';
     towersOfHanoi(n - 1, rod2, rod1, rod3);
 }
 
 int main()
 {
-    printReverse("Hello World");
+    std::cout << gcdRec(72, 90); // -> 18
 }
