@@ -124,15 +124,14 @@ else
 
 ## Task 09 - Reverse Print
 ```c++
-void printReverse(const int* begin, const int* end);
+void printReverse(const char* str);
 ```
 
-Write a function that prints range in reverse order.
+Write a function that prints string in reverse order.
 
 ### Example:
 ```c++
-const int arr[] {5, 7, 4, 10, 6, 0};
-printReverse(std::begin(arr), std::end(arr)); // -> 0 6 10 4 7 5
+printReverse("Hello World"); // -> dlroW olleH
 ```
 
 ## Task 10 - Max Repeated
