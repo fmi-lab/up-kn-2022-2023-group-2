@@ -43,7 +43,7 @@ int atoi(const char str[])
 {
     int result = 0;
     bool isNegative = str[0] == '-';
-    size_t i = isNegative ? 1 : 0;
+    size_t i = isNegative;
 
     while (str[i] && str[i] >= '0' && str[i] <= '9')
     {
