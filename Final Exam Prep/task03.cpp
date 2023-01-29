@@ -1,5 +1,4 @@
 #include <iostream>
-constexpr size_t MAX_SIZE = 255;
 
 struct Point
 {
